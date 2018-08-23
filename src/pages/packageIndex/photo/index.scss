@@ -1,0 +1,62 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+page{
+  padding: 0;
+}
+.photo-ctner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 0 rpx(200) 0;
+  camera{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .cover-carmea{
+    // position: absolute;
+    // width: 80%;
+    // height: 80%;
+    // border: 1px dotted yellow;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    // border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    .cover-carmea-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .photo-down{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: rpx(200);
+    width: 100%;
+    background: black;
+  }
+  .down-inner{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #FFF;
+    font-size: rpx(26);
+  }
+  .inner-l{
+    image{
+      width: rpx(80);
+      height: rpx(80);
+      margin-left: rpx(50);
+    }
+  }
+  .inner-m{
+    flex: 1;
+    text-align: center;
+  }
+  .inner-r{
+    margin-right: rpx(50);
+  }
+}

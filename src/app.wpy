@@ -1,0 +1,93 @@
+<style lang="scss">
+@import './common/css/common';
+@import './common/css/base';
+// page 公共样式
+page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: $color-page-background;
+  padding: $page-padding-lr;
+}
+</style>
+
+<script>
+import wepy from 'wepy';
+import 'wepy-async-function';
+import EventQueue from './common/js/eventQueue';
+import { EVENT_QUEUE_NAME } from './common/js/config';
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      'pages/mall/index',
+      'pages/index/index',
+      'pages/mine/index',
+      'pages/login/index',
+      'pages/authorize/index',
+      'pages/webview/index'
+    ],
+    window: {
+      // backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#7733FD',
+      navigationBarTitleText: '御糖CGM助手',
+      navigationBarTextStyle: '#FFF'
+    },
+    subPackages: [
+      {
+        root: 'pages/packageIndex',
+        pages: ['test/index']
+      },
+      {
+        root: 'pages/packageMall',
+        pages: ['test/index']
+      },
+      {
+        root: 'pages/packageMine',
+        pages: ['test/index']
+      }
+    ],
+    tabBar: {
+      color: '#646464;',
+      selectedColor: '#7A6E66',
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: '首页',
+          iconPath: './images/ict_home.png',
+          selectedIconPath: './images/ict_home_sec.png'
+        },
+        {
+          pagePath: 'pages/mall/index',
+          text: '商城',
+          iconPath: './images/ict_mall.png',
+          selectedIconPath: './images/ict_mall_sec.png'
+        },
+        {
+          pagePath: 'pages/mine/index',
+          text: '我的',
+          iconPath: './images/ict_mine.png',
+          selectedIconPath: './images/ict_mine_sec.png'
+        }
+      ]
+    }
+  };
+
+  globalData = {
+    userInfo: null,
+    [EVENT_QUEUE_NAME]: new EventQueue()
+  };
+
+  constructor() {
+    super();
+    this.use('requestfix');
+    // 启动 promise
+    // this.use('promisify');
+  }
+
+  async onLoad() {}
+  async onLaunch() {
+    // wx.setStorageSync(KEY,DATA)
+  }
+}
+</script>

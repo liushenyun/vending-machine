@@ -1,0 +1,60 @@
+
+<template>
+  <view class="index-ctner container-same">
+    <wxs src="../../utils/filter.wxs" module="tools"></wxs>
+    首页
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import Auth from '../../common/js/authProcess.js';
+import { apiIsAuthF } from '../../services/index';
+import { BLOOD_TIP_READED, TIP_GLYCEMIC_TEXT } from '@/common/js/config';
+import miniPro from '@/utils/wepy-pro.js';
+import { showAlertTips } from '@/utils/feature.js';
+
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF'
+  };
+  components = {};
+
+  mixins = [];
+
+  data = {};
+
+  computed = {};
+
+  methods = {};
+
+  events = {};
+
+  async onLoad() {
+    this.getSystemInfo();
+    this.$apply();
+  }
+  onUnload() {}
+  onHide() {}
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target);
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/page/index/index'
+    };
+  }
+  async onShow() {}
+  getSystemInfo() {
+    let res = wepy.getSystemInfoSync();
+    let fitRatio = res.windowWidth / 750;
+    this.$apply();
+  }
+}
+</script>
+<style lang="scss">
+@import './index.scss';
+</style>

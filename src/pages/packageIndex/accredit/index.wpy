@@ -1,0 +1,21 @@
+<template>
+  <view class='accredit-ctner'>
+    <!-- <image class='accredit-bg' mode='widthFix' src='../../../images/accredit_bg.png' /> -->
+    <image class='ex-nor'  src='../../../images/ic_experience_nor.png' />
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Accredit extends wepy.page {
+  data = {}
+  methods = {}
+  onLoad() {
+  }
+}
+</script>
+
+
+<style lang="scss" scoped>
+@import './index.scss'
+</style>

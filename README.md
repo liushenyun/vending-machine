@@ -1,4 +1,4 @@
-# wepy-base
+# 血糖小程序
 
 ### 开发框架
 [WePY](https://tencent.github.io/wepy/)
@@ -28,8 +28,8 @@
 ```js
 /**
  * @description 登录（微信授权流程）
- * server-developer
- * api-url: http://confluence.icarbonx.cn/pages/viewpage.action?pageId=11506926
+ * server-developer: 
+ * api-url:
  */
 const apiwechatLogin = () => `${API_DOMAIN}/connect/wechat`
 ```
@@ -71,15 +71,20 @@ const apiwechatLogin = () => `${API_DOMAIN}/connect/wechat`
 - C - click - 页面点击操作
 - G - general - 普通函数（功能）
 - 不加局部普通函数
+- 用餐升糖
 
 
 
 ### 迭代时解决的问题
 
 1、迭代需要解决的问题
-  - [X] wxss解决过滤器
+  - [X] wxss解决过滤器1
   - [] 登录验证码错误提示
   - [] 接入阿拉丁（需要在阿拉丁创建账号，有一个key）
 
 ### git更新日志
 [CHANGELOG](./CHANGELOG.md)
+
+
+### 错误积累
+- 'wechat.code.expire': 小程序没有绑定公众平台

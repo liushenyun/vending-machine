@@ -1,0 +1,59 @@
+
+<template>
+  <view class="report-ctner">
+    商城
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import Auth from '../../common/js/authProcess.js';
+import { apiGetGiftListF } from '../../services/index';
+import miniPro from '@/utils/wepy-pro.js';
+
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF'
+  };
+  components = {};
+
+  mixins = [];
+
+  data = {};
+
+  computed = {};
+
+  methods = {};
+
+  events = {};
+
+  tapActive() {
+    Auth.getInstance().checkWebchatAuth(true, this.tapActive.bind(this), false);
+  }
+  async onLoad() {
+    this.getSystemInfo();
+    this.$apply();
+  }
+  async onShow() {}
+  onUnload() {}
+  onHide() {}
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target);
+    }
+    return {
+      title: '自定义转发标题'
+    };
+  }
+  getSystemInfo() {
+    let res = wepy.getSystemInfoSync();
+    let fitRatio = res.windowWidth / 750;
+    this.$apply();
+  }
+}
+</script>
+<style lang="scss">
+@import './index.scss';
+</style>

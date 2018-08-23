@@ -1,0 +1,27 @@
+@host=http://localhost:8080
+
+# 可领取碳币列表
+GET {{host}}/carbon-coin/gainable
+
+
+###
+# 领取碳币
+POST  {{host}}/carbon-coin/gain/20180622154800
+
+
+###
+# 碳币 top 100 列表
+GET  {{host}}/carbon-coin/coin-top-100
+
+###
+# 活力值 top 100 列表
+GET  {{host}}/carbon-coin/vitality-top-100
+
+###
+# 当前用户状态
+GET  {{host}}/carbon-coin/status
+
+
+###
+# 签到
+POST  {{host}}/carbon-coin/check-in

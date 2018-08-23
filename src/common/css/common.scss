@@ -1,0 +1,53 @@
+@import './const.scss';
+@import './rpx.scss';
+// ===== button 伪类边框去掉 icx=====
+button.icx-clear-after-border::after{
+    // border: 1px solid rbag(0,0,0,0.2);
+    border: 0;
+}
+
+// ===== input 公共样式 =====
+.icx-placeholder{
+    color: $color-input-placeholder;
+}
+input[class~="icx-input"]{
+    color: $color-input;
+    font-size: 14px;
+}
+// hover-class
+.icx-click-hover{
+    opacity: 0.8;
+}
+
+// 提交 保存按钮
+.icx-btn-submit{
+    background: $color-word-three;
+    border-radius: 6px;
+    height: rpx(90);
+    line-height: rpx(90);
+    text-align: center;
+    font-size:rpx(26);
+    color: #FFF;
+}
+
+// 公共样式
+button.icx-btn-same-sure::after {
+  border: 0;
+}
+button.icx-btn-same-cancel::after {
+  border: 0;
+}
+button.icx-btn-same-sure{
+  height: rpx(90);
+  line-height: rpx(90);
+  background: #6633FF;
+  color: #FFF;
+  font-size: rpx(32);
+}
+button.icx-btn-same-cancel{
+  height: rpx(90);
+  line-height: rpx(90);
+  font-size: rpx(32);
+  background: #E7E7E7;
+  color: $color-word-one;
+}

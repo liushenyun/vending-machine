@@ -1,0 +1,72 @@
+<template>
+  <view class='photo-ctner'>
+    <camera device-position="back" flash="off" binderror="error">
+      <cover-view class="cover-carmea">
+        <cover-image class="cover-carmea-img" src="../../../images/ic_photo_bg.png" />
+      </cover-view>
+    </camera>
+    <view class='photo-down'>
+      <view class='down-inner'>
+        <view class='inner-l' @tap='takeAlbumA'><image src='../../../images/ic_xiangce.png' /></view>
+        <view class='inner-m' @tap='takePhotoA'>拍照</view>
+        <view class='inner-r' @tap='cancelA'>取消</view>
+      </view>
+    </view>
+    
+    <PhotoBloodSure wx:if="{{isShowPhotoSure}}" />
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import PhotoBloodSure from '@/components/PhotoBloodSure/index'
+export default class Photo extends wepy.page {
+  data = {
+    isShowPhotoSure: true
+  };
+  components = {
+    PhotoBloodSure: PhotoBloodSure
+  }
+  methods = {
+    takeAlbumA() {
+      wepy.chooseImage({
+        count: 1, // 默认9
+        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album'], // 可以指定来源是相册还是相机，默认二者都有
+        success: function(res) {
+          // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+          var tempFilePaths = res.tempFilePaths;
+          console.log('tempFilePaths', tempFilePaths);
+        }
+      });
+    },
+    takePhotoA() {
+      const ctx = wepy.createCameraContext();
+      ctx.takePhoto({
+        quality: 'high',
+        success: res => {
+          console.log('resresres', res);
+        }
+      });
+    },
+    cancelA() {
+      wepy.navigateBack({
+        delta: 1
+      });
+    }
+  };
+  events = {
+    'photoSureCancel': (p1) => {
+      this.isShowPhotoSure = false;
+    },
+    'photoSureOk': (p1) => {
+      console.log('photoSureOk', p1)
+      this.isShowPhotoSure = false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import './index.scss';
+</style>

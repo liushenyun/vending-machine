@@ -1,0 +1,55 @@
+
+<template>
+  <view class="model-ctner container-same">
+    我的
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import Auth from '../../common/js/authProcess.js';
+import { apiGetGiftListF } from '../../services/index';
+
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF'
+  };
+  components = {};
+
+  mixins = [];
+
+  data = {};
+
+  computed = {};
+
+  methods = {};
+
+  events = {};
+
+  async onLoad() {
+    this.getSystemInfo();
+    this.$apply();
+  }
+  async onShow() {}
+  onUnload() {}
+  onHide() {}
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target);
+    }
+    return {
+      title: '自定义转发标题'
+    };
+  }
+  getSystemInfo() {
+    let res = wepy.getSystemInfoSync();
+    let fitRatio = res.windowWidth / 750;
+    this.$apply();
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import './index.scss';
+</style>
