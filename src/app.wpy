@@ -6,8 +6,6 @@ page {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: $color-page-background;
-  padding: $page-padding-lr;
 }
 </style>
 
@@ -20,8 +18,8 @@ import { EVENT_QUEUE_NAME } from './common/js/config';
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/mall/index',
       'pages/index/index',
+      'pages/mall/index',
       'pages/mine/index',
       'pages/login/index',
       'pages/authorize/index',
@@ -29,14 +27,14 @@ export default class extends wepy.app {
     ],
     window: {
       // backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#7733FD',
+      navigationBarBackgroundColor: '#FFF',
       navigationBarTitleText: '御糖CGM助手',
-      navigationBarTextStyle: '#FFF'
+      navigationBarTextStyle: 'black'
     },
     subPackages: [
       {
         root: 'pages/packageIndex',
-        pages: ['test/index']
+        pages: ['test/index', 'NearMachine/index']
       },
       {
         root: 'pages/packageMall',
@@ -59,7 +57,7 @@ export default class extends wepy.app {
         },
         {
           pagePath: 'pages/mall/index',
-          text: '商城',
+          text: '商1城',
           iconPath: './images/ict_mall.png',
           selectedIconPath: './images/ict_mall_sec.png'
         },

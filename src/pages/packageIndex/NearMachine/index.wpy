@@ -1,0 +1,40 @@
+<template>
+  <view class='machine-ctner'>
+    <view class='list-outer' wx:for='{{12}}'>
+      <image class='goods-img' src='' />
+      <view class='detail-wrap'>
+        <view class='num'>机器编号：CHWL9834567</view>
+        <view class='addr'>
+          地址：常青路18号
+          地址：常青路18号
+          地址：常青路18号
+          地址：常青路18号
+          地址：常青路18号
+        </view>
+      </view>
+      <image class='position-img' src='../../../images/ic_position.png' />
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+export default class NearMachine extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    navigationBarTitleText: '附近网点'
+  };
+  data = {
+  };
+  components = {
+  }
+  methods = {
+  };
+  events = {
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import './index.scss';
+</style>

@@ -1,3 +1,52 @@
 @import '../../common/css/rpx.scss';
 @import '../../common/css/const.scss';
 @import '../../common/css/mixin.scss';
+.index-ctner{
+    height: 100%;
+    position: relative;
+    padding-top: rpx(100);
+}
+.search-wrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rpx(100);
+    padding: 0 rpx(32);
+    display: flex;
+    align-items: center;
+}
+.input-wrap{
+    height: rpx(62);
+    flex: 1;
+    background: #F3F3F3;
+    border-radius: rpx(100);
+    display: flex;
+    align-items: center;
+    padding: 0 rpx(26);
+    image {
+        width: rpx(26);
+        height: rpx(28);
+        margin-right: rpx(20);
+    }
+    input {
+        height: 100%;
+        flex: 1;
+    }
+}
+.list-btn{
+    width: rpx(80);
+    text-align: right;
+    image{
+        width: rpx(44);
+        height: rpx(44);
+    }
+}
+.map-wrap{
+    width: 100%;
+    height: 100%;
+    map {
+        width: 100%;
+        height: 100%;
+    }
+}

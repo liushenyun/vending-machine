@@ -2,7 +2,31 @@
 <template>
   <view class="index-ctner container-same">
     <wxs src="../../utils/filter.wxs" module="tools"></wxs>
-    首页
+    <view class='search-wrap'>
+      <view class='input-wrap'>
+        <image src='../../images/ic_search.png' />
+        <input placeholder='搜素附近售卖机' class='icx-input' placeholder-class='icx-placeholder'/>
+      </view>
+      <view class='list-btn'>
+        <image @tap='showMoreList' src='../../images/ic_more.png' />
+      </view>
+    </view>
+
+    <view class='map-wrap'>
+      <map
+        id="map"
+        longitude="113.324520"
+        latitude="23.099994"
+        scale="14"
+        controls="{{controls}}"
+        bindcontroltap="controltap"
+        markers="{{markers}}"
+        bindmarkertap="markertap"
+        polyline="{{polyline}}"
+        bindregionchange="regionchange"
+        show-location>
+      </map>
+    </view>
   </view>
 </template>
 
@@ -23,15 +47,41 @@ export default class Index extends wepy.page {
 
   mixins = [];
 
-  data = {};
+  data = {
+    markers: [{
+      iconPath: "/images/ic_position.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      title: '位置1',
+      width: 50,
+      height: 50
+    }]
+  };
 
   computed = {};
 
-  methods = {};
+  methods = {
+    showMoreList() {
+      console.log('showMoreList');
+      wepy.navigateTo({
+        url: '/pages/packageIndex/NearMachine/index'
+      })
+    },
+    regionchange(e) {
+      console.log(e.type)
+    },
+    markertap(e) {
+      console.log(e.markerId)
+    }
+  };
 
   events = {};
 
   async onLoad() {
+    wepy.navigateTo({
+      url: '/pages/packageIndex/NearMachine/index'
+    })
     this.getSystemInfo();
     this.$apply();
   }

@@ -1,0 +1,38 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+.machine-ctner{
+  height: auto;
+  background: #F2F0F3;
+}
+.list-outer{
+  min-height: rpx(60);
+  padding: rpx(20) rpx(30);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  margin-bottom: rpx(8);
+  .goods-img{
+    width: rpx(100);
+    height: rpx(100);
+    background: red;
+  }
+  .detail-wrap{
+    flex: 1;
+    margin: 0 rpx(30);
+    .num{
+      font-size: rpx(32);
+      color: #060606;
+      line-height: rpx(46);
+    }
+    .addr{
+      font-size: rpx(28);
+      color: #646464;
+      line-height: rpx(40);
+    }
+  }
+  .position-img{
+    width: rpx(46);
+    height: rpx(56);
+  }
+}
