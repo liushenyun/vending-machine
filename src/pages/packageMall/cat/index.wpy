@@ -1,0 +1,25 @@
+<template>
+  <view class='cat-ctner'>
+    <scroll-view scroll-y class='scroll'>
+  
+    </scroll-view>
+    <view class='cat-bottom'></view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    navigationBarBackgroundColor: '#09103b',
+    navigationBarTextStyle: '#FFF'
+  };
+  components = {
+  };
+}
+</script>
+
+<style lang="scss" scoped>
+@import './index.scss'
+</style>
+

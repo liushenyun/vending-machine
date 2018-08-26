@@ -18,8 +18,8 @@ import { EVENT_QUEUE_NAME } from './common/js/config';
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/index/index',
       'pages/mall/index',
+      'pages/index/index',
       'pages/mine/index',
       'pages/login/index',
       'pages/authorize/index',
@@ -34,11 +34,11 @@ export default class extends wepy.app {
     subPackages: [
       {
         root: 'pages/packageIndex',
-        pages: ['test/index', 'NearMachine/index']
+        pages: ['test/index', 'nearMachine/index']
       },
       {
         root: 'pages/packageMall',
-        pages: ['test/index']
+        pages: ['test/index', 'cat/index']
       },
       {
         root: 'pages/packageMine',

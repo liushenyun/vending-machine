@@ -1,3 +1,71 @@
 @import '../../common/css/rpx.scss';
 @import '../../common/css/const.scss';
 @import '../../common/css/mixin.scss';
+page{
+    background: #F2F0F3;
+}
+.mall-ctner{
+    height: auto;
+    background: #F2F0F3;
+    padding: rpx(22) rpx(22) rpx(66) rpx(22);
+}
+.goods-outer{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    .goods-wrap{
+        height: rpx(500);
+        width: 49%;
+        float: left;
+        margin-bottom: rpx(20);
+        background: #FFF;
+        &:nth-child(odd) {
+            margin-right: 2%;
+        }
+    }
+    .goods-img{
+        height: rpx(340);
+        background: lightcoral;
+    }
+    .goods-desc{
+        font-size: rpx(32);
+        color: #333;
+        padding: 0 rpx(20);
+        margin: rpx(6) 0 rpx(30) 0;
+    }
+    .goods-price{
+        height: rpx(42);
+        padding: 0 rpx(20);
+        display: flex;
+        align-items: center;
+        text{
+            flex: 1
+        }
+        image{
+            width: rpx(42);
+            height: rpx(42);
+        }
+    }
+}
+
+.cat-outer{
+    position: fixed;
+    right: rpx(30);
+    bottom: rpx(4);
+    width: rpx(154);
+    height: rpx(166);
+    image{
+        width: 100%;
+        height: 100%;
+    }
+    .cat-num{
+        position: absolute;
+        top: rpx(20);
+        right: 0;
+        padding: rpx(10);
+        border-radius: rpx(100);
+        background: #FF7360;
+        font-size: rpx(20);
+        color: #FFF;
+    }
+}

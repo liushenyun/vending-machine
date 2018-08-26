@@ -79,9 +79,9 @@ export default class Index extends wepy.page {
   events = {};
 
   async onLoad() {
-    wepy.navigateTo({
-      url: '/pages/packageIndex/NearMachine/index'
-    })
+    // wepy.navigateTo({
+    //   url: '/pages/packageIndex/NearMachine/index'
+    // })
     this.getSystemInfo();
     this.$apply();
   }

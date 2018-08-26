@@ -1,7 +1,20 @@
 
 <template>
-  <view class="report-ctner">
-    商城
+  <view class="mall-ctner">
+    <view class='goods-outer'>
+      <view class='goods-wrap' wx:for='{{20}}'>
+        <view class='goods-img'></view>
+        <view class='goods-desc'>彩色甜甜圈牛肉味</view>
+        <view class='goods-price'>
+          <text>￥69</text>
+          <image src='../../images/ic_cat_add.png' />
+        </view>
+      </view>
+    </view>
+    <view class='cat-outer'>
+      <image src='../../images/ic_cat_big.png' />
+      <view class='cat-num'>12</view>
+    </view>
   </view>
 </template>
 
@@ -32,6 +45,9 @@ export default class Index extends wepy.page {
     Auth.getInstance().checkWebchatAuth(true, this.tapActive.bind(this), false);
   }
   async onLoad() {
+     wepy.navigateTo({
+      url: '/pages/packageMall/cat/index'
+    })
     this.getSystemInfo();
     this.$apply();
   }

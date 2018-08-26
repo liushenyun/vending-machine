@@ -1,0 +1,23 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+.cat-ctner{
+    height: 100%;
+    width: 100%;
+    padding: rpx(22) rpx(20) rpx(120) rpx(20);
+    background: #F2F0F3;
+    position: relative;
+}
+.scroll{
+    height: 100%;
+    width: 100%;
+    background: lightcoral;
+}
+.cat-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: rpx(100);
+    width: 100%;
+    background: #FFF;
+}
