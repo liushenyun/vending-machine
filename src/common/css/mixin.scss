@@ -39,3 +39,16 @@
       transform: scaleX(0.5);
   }
 }
+
+@mixin borderLeftOnePx($color: #E2E3E5) {
+  &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      height: 100%;
+      width: 1px;
+      background: $color;
+      transform: scaleX(0.5);
+  }
+}

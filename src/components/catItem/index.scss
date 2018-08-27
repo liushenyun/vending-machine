@@ -1,0 +1,59 @@
+@import '../../common/css/rpx.scss';
+@import '../../common/css/const.scss';
+@import '../../common/css/mixin.scss';
+.cat-item-ctner{
+    padding: rpx(30) rpx(20);
+    background: #FFF;
+    display: flex;
+    .cat-l{
+        width: rpx(40);
+        background: #999;
+    }
+    .cat-m{
+        width: rpx(140);
+        height: rpx(140);
+        background: red;
+        margin: 0 rpx(30) 0 rpx(40);
+    }
+    .cat-r{
+        flex: 1;
+        .goods-name{
+            font-size: rpx(32);
+            color: #060606;
+            margin-bottom: rpx(68);
+        }
+        .goods-price{
+            height: rpx(42);
+            display: flex;
+            justify-content: space-between;
+            ._price{
+                font-size: rpx(36);
+                color: #FF7360;
+            }
+            ._num{
+                border-radius: rpx(2);
+                height: rpx(42);
+                min-width: rpx(168);
+                border: rpx(1) solid #F2F0F3;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                .num-l{
+                    width: rpx(42);
+                    position: relative;
+                    @include borderRightOnePx;
+                }
+                .num-m{
+                    flex: 1;
+                    font-size: rpx(26);
+                    color: #060606;
+                }
+                .num-r{
+                    width: rpx(42);
+                    position: relative;
+                    @include borderLeftOnePx;
+                }
+            }
+        }
+    }
+}

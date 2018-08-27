@@ -11,7 +11,9 @@
 .scroll{
     height: 100%;
     width: 100%;
-    background: lightcoral;
+    .cat-itme-wrap{
+        margin-bottom: rpx(20);
+    }
 }
 .cat-bottom{
     position: absolute;
@@ -20,4 +22,25 @@
     height: rpx(100);
     width: 100%;
     background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 rpx(20);
+    .price-total{
+        font-size: rpx(36);
+        color: #796D66;
+        margin-right: rpx(20);
+        text:nth-of-type(2) {
+            color: #FF7360;
+        }
+    }
+    .pay-btn{
+        width: rpx(300);
+        height: rpx(78);
+        line-height: rpx(78);
+        text-align: center;
+        background: #999;
+        border-radius: 100px;
+        color: #FFF;
+    }
 }

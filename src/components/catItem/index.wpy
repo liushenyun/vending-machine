@@ -1,0 +1,51 @@
+<template>
+  <view class="cat-item-ctner">
+    <view class='cat-l'>11</view>
+    <view class='cat-m'>232</view>
+    <view class='cat-r'>
+        <view class='goods-name'>彩色甜甜圈牛肉味</view>
+        <view class='goods-price'>
+            <view class='_price'>$39</view>
+            <view class='_num'>
+                <view class='num-l' @tap='numReduce'>-</view>
+                <view class='num-m'>2</view>
+                <view class='num-r' @tap='numAdd'>+</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+export default class CatItem extends wepy.component {
+  props = {
+      item: {
+          type: Object,
+          default: {}
+      }
+  }
+  data = {
+  }
+  methods = {
+      numAdd() {
+          console.log('numAdd');
+      },
+      numReduce() {
+          console.log('numReduce');
+      }
+  }
+  watch = {
+      item(newVal, oldVal) {
+
+      }
+  }
+  onLoad() {
+      console.log('item', this.item);
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import './index.scss'
+</style>
