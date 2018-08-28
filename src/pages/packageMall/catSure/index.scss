@@ -24,22 +24,12 @@
     background: #FFF;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 0 rpx(20);
-    font-size: rpx(36);
-    .check-all{
-        display: flex;
-        align-items: center;
-        image{
-            height: rpx(40);
-            width: rpx(40);
-            margin-right: rpx(12);
-        }
-    }
     .price-total{
+        font-size: rpx(36);
         color: #796D66;
         margin-right: rpx(20);
-        flex: 1;
-        text-align: right;
         text:nth-of-type(2) {
             color: #FF7360;
         }
@@ -49,8 +39,43 @@
         height: rpx(78);
         line-height: rpx(78);
         text-align: center;
-        background: linear-gradient(to right, #C0B09D, #80746C);
+        background: #1AAD19;
         border-radius: 100px;
         color: #FFF;
+    }
+}
+
+.cat-item-ctner{
+    padding: rpx(30) rpx(20);
+    background: #FFF;
+    display: flex;
+    .cat-m{
+        width: rpx(140);
+        height: rpx(140);
+        margin: 0 rpx(30) 0 0;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cat-r{
+        flex: 1;
+        .goods-name{
+            font-size: rpx(32);
+            color: #060606;
+            margin-bottom: rpx(68);
+        }
+        .goods-price{
+            height: rpx(42);
+            display: flex;
+            justify-content: space-between;
+            font-size: rpx(36);
+            ._price{
+                color: #FF7360;
+            }
+            ._num{
+                color: #646464;
+            }
+        }
     }
 }

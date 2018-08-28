@@ -1,7 +1,27 @@
 
 <template>
-  <view class="model-ctner container-same">
-    我的
+  <view class="mine-ctner">
+    <image class='min-bg' src='../../images/mine_bg.png' />
+    <view class='person-outer'>
+        <view class='img'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='name'>
+          <open-data type="userNickName"></open-data>
+        </view>
+    </view>
+    <view class='action-outer'>
+        <view class='action-same'>
+          <image class='ic-icon' src='../../images/ic_order.png' />
+          <text>我的订单</text>
+          <image class='ic-right' src='../../images/ic_order.png' />
+        </view>
+        <view class='action-same'>
+          <image class='ic-icon' src='../../images/ic_feedback.png' />
+          <text>我的反馈</text>
+          <image class='ic-right' src='../../images/ic_order.png' />
+        </view>
+    </view>
   </view>
 </template>
 

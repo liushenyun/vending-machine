@@ -3,7 +3,9 @@
   <view class="mall-ctner">
     <view class='goods-outer'>
       <view class='goods-wrap' wx:for='{{20}}'>
-        <view class='goods-img'></view>
+        <view class='goods-img'>
+          <image src='../../images/good_f_del.png' />
+        </view>
         <view class='goods-desc'>彩色甜甜圈牛肉味</view>
         <view class='goods-price'>
           <text>￥69</text>
@@ -46,7 +48,9 @@ export default class Index extends wepy.page {
   }
   async onLoad() {
      wepy.navigateTo({
-      url: '/pages/packageMall/cat/index'
+      // url: '/pages/packageMall/cat/index'
+      // url: '/pages/packageMall/catSure/index'
+      // url: '/pages/packageMall/goodsDetail/index'
     })
     this.getSystemInfo();
     this.$apply();

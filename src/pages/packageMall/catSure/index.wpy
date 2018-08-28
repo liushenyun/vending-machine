@@ -1,20 +1,29 @@
 <template>
   <view class='cat-ctner'>
     <scroll-view scroll-y class='scroll'>
-      <repeat for="{{list}}" key="index" index="index" item="item">
-          <CatItem class='cat-itme-wrap' :item="item"></CatItem>
-      </repeat>
+      <block wx:for="{{list}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+           <view class="cat-item-ctner">
+            <view class='cat-m'>
+              <image src='../../../images/goods_small_del.png' />
+            </view>
+            <view class='cat-r'>
+                <view class='goods-name'>彩色甜甜圈牛肉味</view>
+                <view class='goods-price'>
+                    <view class='_price'>$39</view>
+                    <view class='_num'>
+                      x 2
+                    </view>
+                </view>
+            </view>
+          </view>
+      </block>
     </scroll-view>
     <view class='cat-bottom'>
-      <view class='check-all'>
-        <image src='../../../images/ic_check_off.png' />
-        <text>全选</text>
-      </view>
       <view class='price-total'>
-        <text>合计：</text>
+        <text>商品金额：</text>
         <text>￥89</text>
       </view>
-      <view class='pay-btn'>去结算(4件)</view>
+      <view class='pay-btn'>微信支付</view>
     </view>
   </view>
 </template>
@@ -22,7 +31,7 @@
 <script>
 import wepy from 'wepy'
 import CatItem from '@/components/catItem/index'
-export default class Index extends wepy.page {
+export default class CatSure extends wepy.page {
   data = {
     list: [
       {check: false, num: 1, name: '彩色甜甜圈牛肉味1'},
@@ -33,6 +42,7 @@ export default class Index extends wepy.page {
   }
   config = {
     navigationBarBackgroundColor: '#09103b',
+    navigationBarTitleText: '确认订单',
     navigationBarTextStyle: '#FFF'
   };
   components = {

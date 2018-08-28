@@ -1,7 +1,11 @@
 <template>
   <view class="cat-item-ctner">
-    <view class='cat-l'>11</view>
-    <view class='cat-m'>232</view>
+    <view class='cat-l'>
+        <image src='../../images/ic_check_off.png' />
+    </view>
+    <view class='cat-m'>
+        <image src='../../images/goods_small_del.png' />
+    </view>
     <view class='cat-r'>
         <view class='goods-name'>彩色甜甜圈牛肉味</view>
         <view class='goods-price'>

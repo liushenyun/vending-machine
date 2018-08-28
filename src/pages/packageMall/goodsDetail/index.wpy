@@ -1,0 +1,40 @@
+<template>
+  <view class='goods-detail-ctner'>
+    <image class='goods-banner' src='../../../images/good_detail_del.png' />
+    <view class='goods-dec'>
+      <view>彩色甜甜圈牛肉味</view>
+      <view>¥39.00</view>
+    </view>
+    <view class='detail-outer'>
+      <view class='title-outer'>
+        <view class='line'></view>
+        <view class='word'>商品详情</view>
+      </view>
+    </view>
+
+    <view class='detail-btn-wrap'>
+      <view>加入购物车</view>
+      <view>立即购买</view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class GoodsDetail extends wepy.page {
+  data = {
+  }
+  config = {
+    navigationBarBackgroundColor: '#09103b',
+    navigationBarTitleText: '商品详情',
+    navigationBarTextStyle: '#FFF'
+  };
+  components = {
+  };
+}
+</script>
+
+<style lang="scss" scoped>
+@import './index.scss'
+</style>
+
