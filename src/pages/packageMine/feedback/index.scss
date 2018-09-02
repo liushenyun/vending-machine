@@ -1,0 +1,39 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+page{
+
+}
+.feedback-ctner{
+    width: 100%;
+    height: 100%;
+    padding: $page-padding-lr $page-padding-lr;
+}
+.feedback-tip{
+    font-size: rpx(30);
+    margin-bottom: rpx(40);
+    view:nth-of-type(1){
+        margin-bottom: rpx(10)
+    }
+    view{
+        line-height: rpx(44);
+    }
+}
+.textarea-wrap{
+    view {
+        font-size: rpx(28);
+        color: #646464;
+    }
+    textarea{
+        width: 100%;
+        height: rpx(300);
+        background: #F2F0F3;
+        border-radius: rpx(8);
+        margin: rpx(10) 0 rpx(30) 0;
+        padding: rpx(10);
+    }
+    .icx-btn-submit{
+        background: linear-gradient(to right, #C0B09D, #80746C);
+        border-radius: 100px;
+    }
+}

@@ -42,7 +42,7 @@ export default class extends wepy.app {
       },
       {
         root: 'pages/packageMine',
-        pages: ['test/index']
+        pages: ['test/index', 'feedback/index', 'order/index', 'orderDetail/index']
       }
     ],
     tabBar: {

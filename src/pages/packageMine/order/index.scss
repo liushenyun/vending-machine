@@ -1,0 +1,48 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+page{
+
+}
+.order-ctner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: rpx(80);
+}
+.top-outer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rpx(80);
+    padding: 0 rpx(60);
+    font-size: rpx(28);
+    color: #060606;
+    display: flex;
+    justify-content: space-between;
+    view{
+        height: 100%;
+        line-height: rpx(80);
+        padding: 0 rpx(6);
+        position: relative;
+        &.active{
+            color: #FF7360;
+            border-bottom: 1px solid #FF7360;
+            // @include borderBottomOnePx(#FF7360');
+        }
+    }
+}
+.order-con{
+    height: 100%;
+    padding: rpx(20) 0;
+    background: #F2F0F3;
+    box-sizing: border-box;
+    swiper{
+        height: 100%;
+    }
+    scroll-view{
+        height: 100%;
+        padding: 0 rpx(20);
+    }
+}

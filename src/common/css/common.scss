@@ -14,6 +14,10 @@ input[class~="icx-input"]{
     color: $color-input;
     font-size: 14px;
 }
+textarea[class~="icx-input"]{
+    color: $color-input;
+    font-size: 14px;
+}
 // hover-class
 .icx-click-hover{
     opacity: 0.8;

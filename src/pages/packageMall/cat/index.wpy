@@ -32,8 +32,7 @@ export default class Index extends wepy.page {
     ]
   }
   config = {
-    navigationBarBackgroundColor: '#09103b',
-    navigationBarTextStyle: '#FFF'
+    
   };
   components = {
     CatItem: CatItem

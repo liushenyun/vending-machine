@@ -48,6 +48,10 @@ export default class Index extends wepy.page {
   events = {};
 
   async onLoad() {
+    // wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
+    wepy.navigateTo({ url: '/pages/packageMine/order/index' });
+    // wepy.navigateTo({ url: '/pages/packageMine/orderDetail/index' });
+    
     this.getSystemInfo();
     this.$apply();
   }

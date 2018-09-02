@@ -1,0 +1,40 @@
+<template>
+  <view class='feedback-ctner'>
+    <view class='feedback-tip'>
+      <view>HI，亲爱的用户</view>
+      <view>如果您见到了此界面说明你对我们的真爱，明人不说暗
+            话，请向我透露你最真实的想法和建议，我们将为你而改变！
+      </view>
+    </view>
+    <view class='textarea-wrap'>
+      <view>反馈内容：</view>
+      <form bindsubmit="bindFormSubmit">
+        <textarea maxlength='200' name="textarea" class='icx-input' placeholder-class='icx-placeholder' placeholder="请输入您的意见" />
+        <button class='icx-btn-submit icx-clear-after-border' form-type="submit"> 提交 </button>
+      </form>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    navigationBarBackgroundColor: '#09103b',
+    navigationBarTextStyle: '#FFF',
+    navigationBarTitleText: '建议反馈'
+  };
+  components = {
+  };
+  methods = {
+    bindFormSubmit(e) {
+      console.log(e.detail.value.textarea);
+      
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import './index'
+</style>
+
