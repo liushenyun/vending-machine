@@ -28,7 +28,7 @@ export default class extends wepy.app {
     window: {
       // backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#FFF',
-      navigationBarTitleText: '御糖CGM助手',
+      navigationBarTitleText: '甜甜圈',
       navigationBarTextStyle: 'black'
     },
     subPackages: [
@@ -57,7 +57,7 @@ export default class extends wepy.app {
         },
         {
           pagePath: 'pages/mall/index',
-          text: '商1城',
+          text: '商城',
           iconPath: './images/ict_mall.png',
           selectedIconPath: './images/ict_mall_sec.png'
         },

@@ -2,7 +2,7 @@
 <template>
   <view class="mall-ctner">
     <view class='goods-outer'>
-      <view class='goods-wrap' wx:for='{{20}}'>
+      <view class='goods-wrap' @tap='toGoodsDetailA' wx:for='{{20}}'>
         <view class='goods-img'>
           <image src='../../images/good_f_del.png' />
         </view>
@@ -13,7 +13,7 @@
         </view>
       </view>
     </view>
-    <view class='cat-outer'>
+    <view @tap='toCatA' class='cat-outer'>
       <image src='../../images/ic_cat_big.png' />
       <view class='cat-num'>12</view>
     </view>
@@ -39,7 +39,18 @@ export default class Index extends wepy.page {
 
   computed = {};
 
-  methods = {};
+  methods = {
+    toGoodsDetailA() {
+      wepy.navigateTo({
+        url: '/pages/packageMall/goodsDetail/index'
+      });
+    },
+    toCatA() {
+      wepy.navigateTo({
+        url: '/pages/packageMall/cat/index'
+      });
+    }
+  };
 
   events = {};
 
@@ -47,11 +58,11 @@ export default class Index extends wepy.page {
     Auth.getInstance().checkWebchatAuth(true, this.tapActive.bind(this), false);
   }
   async onLoad() {
-     wepy.navigateTo({
+    wepy.navigateTo({
       // url: '/pages/packageMall/cat/index'
       // url: '/pages/packageMall/catSure/index'
       // url: '/pages/packageMall/goodsDetail/index'
-    })
+    });
     this.getSystemInfo();
     this.$apply();
   }

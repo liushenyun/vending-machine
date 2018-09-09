@@ -65,7 +65,7 @@ export default class Index extends wepy.page {
     showMoreList() {
       console.log('showMoreList');
       wepy.navigateTo({
-        url: '/pages/packageIndex/NearMachine/index'
+        url: '/pages/packageIndex/nearMachine/index'
       })
     },
     regionchange(e) {

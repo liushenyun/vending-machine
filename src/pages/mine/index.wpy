@@ -11,12 +11,12 @@
         </view>
     </view>
     <view class='action-outer'>
-        <view class='action-same'>
+        <view class='action-same' @tap='toOrderA'>
           <image class='ic-icon' src='../../images/ic_order.png' />
           <text>我的订单</text>
           <image class='ic-right' src='../../images/ic_order.png' />
         </view>
-        <view class='action-same'>
+        <view class='action-same' @tap='toFeedbackA'>
           <image class='ic-icon' src='../../images/ic_feedback.png' />
           <text>我的反馈</text>
           <image class='ic-right' src='../../images/ic_order.png' />
@@ -43,15 +43,19 @@ export default class Index extends wepy.page {
 
   computed = {};
 
-  methods = {};
+  methods = {
+    toOrderA() {
+      wepy.navigateTo({ url: '/pages/packageMine/order/index' });
+    },
+    toFeedbackA() {
+      wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
+    }
+  };
 
   events = {};
 
   async onLoad() {
-    // wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
-    wepy.navigateTo({ url: '/pages/packageMine/order/index' });
     // wepy.navigateTo({ url: '/pages/packageMine/orderDetail/index' });
-    
     this.getSystemInfo();
     this.$apply();
   }

@@ -14,33 +14,38 @@
         <text>合计：</text>
         <text>￥89</text>
       </view>
-      <view class='pay-btn'>去结算(4件)</view>
+      <view class='pay-btn' @tap='toSureOrderA'>去结算(4件)</view>
     </view>
   </view>
 </template>
 
 <script>
-import wepy from 'wepy'
-import CatItem from '@/components/catItem/index'
+import wepy from 'wepy';
+import CatItem from '@/components/catItem/index';
 export default class Index extends wepy.page {
   data = {
     list: [
-      {check: false, num: 1, name: '彩色甜甜圈牛肉味1'},
-      {check: false, num: 1, name: '彩色甜甜圈牛肉味2'},
-      {check: false, num: 1, name: '彩色甜甜圈牛肉味3'},
-      {check: false, num: 1, name: '彩色甜甜圈牛肉味3'}
+      { check: false, num: 1, name: '彩色甜甜圈牛肉味1' },
+      { check: false, num: 1, name: '彩色甜甜圈牛肉味2' },
+      { check: false, num: 1, name: '彩色甜甜圈牛肉味3' },
+      { check: false, num: 1, name: '彩色甜甜圈牛肉味3' }
     ]
-  }
-  config = {
-    
   };
+  config = {};
   components = {
     CatItem: CatItem
+  };
+  methods = {
+    toSureOrderA() {
+      wepy.navigateTo({
+        url: '/pages/packageMall/catSure/index'
+      });
+    }
   };
 }
 </script>
 
 <style lang="scss" scoped>
-@import './index.scss'
+@import './index.scss';
 </style>
 

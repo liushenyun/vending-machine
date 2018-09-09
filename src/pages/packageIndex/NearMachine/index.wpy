@@ -1,7 +1,7 @@
 <template>
   <view class='machine-ctner'>
     <view class='list-outer' wx:for='{{12}}'>
-      <image class='goods-img' src='' />
+      <image class='goods-img' src='../../../images/goods_small_del.png' />
       <view class='detail-wrap'>
         <view class='num'>机器编号：CHWL9834567</view>
         <view class='addr'>
