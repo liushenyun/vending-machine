@@ -18,9 +18,9 @@ import { EVENT_QUEUE_NAME } from './common/js/config';
 export default class extends wepy.app {
   config = {
     pages: [
+      'pages/index/index',
       'pages/mine/index',
       'pages/mall/index',
-      'pages/index/index',
       'pages/login/index',
       'pages/authorize/index',
       'pages/webview/index'

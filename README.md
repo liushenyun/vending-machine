@@ -88,3 +88,8 @@ const apiwechatLogin = () => `${API_DOMAIN}/connect/wechat`
 
 ### 错误积累
 - 'wechat.code.expire': 小程序没有绑定公众平台
+
+### 资料缺少
+
+1. 我的 => 消息、设备图片
+2. tab栏: 设备未选中图片

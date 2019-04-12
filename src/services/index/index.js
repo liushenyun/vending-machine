@@ -1,6 +1,7 @@
 import wepy from 'wepy'
 import {
-  apiIsAuth
+  apiIsAuth,
+  apiGoodsList
 } from './api';
 import packagePromise from '../packagePromise';
 import { request } from '../request';
@@ -19,6 +20,18 @@ const apiIsAuthF = (fun) => packagePromise((resolve, reject) => {
     .catch(err => reject(err))
 })
 
+const apiGoodsListF = (fun) => packagePromise((resolve, reject) => {
+  console.log('apiGetGiftListF', fun)
+  request({
+    url: apiGoodsList()
+  }, fun)
+    .then(msg => {
+      resolve(msg);
+    })
+    .catch(err => reject(err))
+})
+
 export {
-  apiIsAuthF
+  apiIsAuthF,
+  apiGoodsListF
 }
